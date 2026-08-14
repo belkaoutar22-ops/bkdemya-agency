@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import WhyUsSection from './components/WhyUsSection';
@@ -11,15 +11,9 @@ import FinalCtaSection from './components/FinalCtaSection';
 import Footer from './components/Footer';
 import StickyMobileBar from './components/StickyMobileBar';
 import QualificationModal from './components/QualificationModal';
-import { trackPageView } from './utils/pixel';
 
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  useEffect(() => {
-    // 🎯 Track Meta Pixel PageView on initial app mount safely
-    trackPageView();
-  }, []);
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
