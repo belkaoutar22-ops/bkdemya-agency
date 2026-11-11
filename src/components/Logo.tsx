@@ -14,7 +14,7 @@ export default function Logo({ className = '', size = 'md' }: LogoProps) {
       {/* Main Brand Title - BKDEMYA */}
       <div className="flex items-center gap-1">
         <span
-          className={`font-black tracking-wider text-[#f16726] uppercase leading-none ${
+          className={`font-black tracking-wider text-[#DE632E] uppercase leading-none ${
             isSmall ? 'text-xl' : isLarge ? 'text-3xl' : 'text-2xl'
           }`}
           style={{
@@ -28,7 +28,7 @@ export default function Logo({ className = '', size = 'md' }: LogoProps) {
 
       {/* Subtitle - BUSINESS STRATEGY SOLUTIONS */}
       <span
-        className={`font-extrabold uppercase tracking-[0.16em] text-[#1b4332] leading-tight mt-0.5 ${
+        className={`font-extrabold uppercase tracking-[0.16em] text-[#3D4B2C] leading-tight mt-0.5 ${
           isSmall ? 'text-[8px]' : isLarge ? 'text-[11px]' : 'text-[9.5px]'
         }`}
         style={{

@@ -34,13 +34,13 @@ export default function TargetAudienceSection({ onOpenBookingModal }: TargetAudi
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200/80 text-[#ea580c] text-xs sm:text-sm font-extrabold">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200/80 text-[#DE632E] text-xs sm:text-sm font-extrabold">
             <span>القطاعات المستهدفة</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
             هل هذه الخدمة{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff6b00] to-[#ea580c]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DE632E] to-[#c85220]">
               مناسبة لك؟
             </span>
           </h2>
@@ -62,15 +62,15 @@ export default function TargetAudienceSection({ onOpenBookingModal }: TargetAudi
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-white group-hover:bg-orange-50 text-[#ea580c] border border-slate-200/90 group-hover:border-orange-200 flex items-center justify-center transition-colors shadow-xs">
+                    <div className="w-12 h-12 rounded-xl bg-white group-hover:bg-orange-50 text-[#DE632E] border border-slate-200/90 group-hover:border-orange-200 flex items-center justify-center transition-colors shadow-xs">
                       <IconComponent className="w-6 h-6" />
                     </div>
-                    <span className="text-[11px] font-bold px-2.5 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 group-hover:bg-emerald-50 group-hover:text-emerald-700 group-hover:border-emerald-200 transition-colors">
+                    <span className="text-[11px] font-bold px-2.5 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 group-hover:bg-emerald-50 group-hover:text-[#3D4B2C] group-hover:border-[#3D4B2C]/20 transition-colors">
                       {ind.leadsType}
                     </span>
                   </div>
 
-                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-[#ea580c] transition-colors mb-2">
+                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-[#DE632E] transition-colors mb-2">
                     {ind.title}
                   </h3>
 
@@ -80,7 +80,7 @@ export default function TargetAudienceSection({ onOpenBookingModal }: TargetAudi
                 </div>
 
                 <div className="mt-6 pt-4 border-t border-slate-200/60 flex items-center gap-2 text-xs font-bold text-slate-700">
-                  <CheckCircle2 className="w-4 h-4 text-[#10b981]" />
+                  <CheckCircle2 className="w-4 h-4 text-[#3D4B2C]" />
                   <span>حلول حملات Meta مخصصة لقطاعك</span>
                 </div>
               </div>
@@ -89,7 +89,7 @@ export default function TargetAudienceSection({ onOpenBookingModal }: TargetAudi
         </div>
 
         {/* Bottom Reassurance Banner */}
-        <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-orange-500/10 via-emerald-500/10 to-orange-500/5 border border-orange-200/60 flex flex-col sm:flex-row items-center justify-between gap-6 text-right">
+        <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#DE632E]/10 via-[#3D4B2C]/10 to-[#DE632E]/5 border border-orange-200/60 flex flex-col sm:flex-row items-center justify-between gap-6 text-right">
           <div className="space-y-1 max-w-xl">
             <h4 className="text-base sm:text-lg font-bold text-slate-900">
               نشاطك ينتمي لقطاع آخر؟
@@ -102,10 +102,10 @@ export default function TargetAudienceSection({ onOpenBookingModal }: TargetAudi
           <button
             id="target-industry-cta"
             onClick={onOpenBookingModal}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#ff6b00] hover:bg-[#ea580c] text-white text-sm font-bold shadow-md hover:shadow-lg transition-all shrink-0 cursor-pointer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#DE632E] hover:bg-[#c85220] text-white text-sm font-bold shadow-md hover:shadow-lg transition-all shrink-0 cursor-pointer"
           >
             <Calendar className="w-4 h-4" />
-            <span>ناقش نشاطك في 30 دقيقة</span>
+            <span>احجز استشارة مجانية (30 دقيقة)</span>
             <ArrowLeft className="w-4 h-4" />
           </button>
         </div>

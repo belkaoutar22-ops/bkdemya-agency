@@ -1,7 +1,5 @@
-import { BRAND_CONFIG } from '../data/content';
-import { Calendar, MessageCircle, ArrowUp } from 'lucide-react';
+import { Calendar, ArrowUp } from 'lucide-react';
 import Logo from './Logo';
-import { trackContact } from '../utils/pixel';
 
 interface FooterProps {
   onOpenBookingModal: () => void;
@@ -10,10 +8,6 @@ interface FooterProps {
 export default function Footer({ onOpenBookingModal }: FooterProps) {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const handleWhatsAppClick = () => {
-    trackContact('whatsapp_footer');
   };
 
   return (
@@ -34,22 +28,11 @@ export default function Footer({ onOpenBookingModal }: FooterProps) {
               <button
                 id="footer-book-cal"
                 onClick={onOpenBookingModal}
-                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-[#ff6b00] text-white text-xs font-bold hover:bg-[#ea580c] transition-colors cursor-pointer"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#DE632E] to-[#c85220] hover:from-[#c85220] hover:to-[#b34417] text-white text-xs font-bold transition-all shadow-md cursor-pointer"
               >
-                <Calendar className="w-3.5 h-3.5" />
-                <span>حجز استشارة Google Calendar</span>
+                <Calendar className="w-4 h-4" />
+                <span>احجز استشارة مجانية عبر Google Calendar</span>
               </button>
-              <a
-                id="footer-whatsapp"
-                href={BRAND_CONFIG.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={handleWhatsAppClick}
-                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-slate-800 text-emerald-400 hover:text-emerald-300 text-xs font-bold border border-slate-700 transition-colors"
-              >
-                <MessageCircle className="w-3.5 h-3.5" />
-                <span>واتساب</span>
-              </a>
             </div>
           </div>
 
@@ -87,25 +70,16 @@ export default function Footer({ onOpenBookingModal }: FooterProps) {
 
           {/* Contact Details */}
           <div className="space-y-3">
-            <h4 className="text-white text-sm font-bold">التواصل المباشر</h4>
+            <h4 className="text-white text-sm font-bold">حجز المواعيد</h4>
             <ul className="space-y-2 text-xs font-medium">
               <li className="text-slate-300">
-                واتساب:{' '}
-                <a
-                  href={BRAND_CONFIG.whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={handleWhatsAppClick}
-                  className="text-emerald-400 hover:underline dir-ltr inline-block font-mono"
-                >
-                  {BRAND_CONFIG.whatsappPhone}
-                </a>
+                المنصة: Google Calendar الرسمي
               </li>
               <li className="text-slate-300">
-                الاستشارة: جلسة 30 دقيقة عبر Google Meet
+                اللقاء: جلسة 30 دقيقة فردية عبر Google Meet
               </li>
-              <li className="text-emerald-400 font-bold">
-                ✓ استشارة مجانية 100%
+              <li className="text-[#DE632E] font-bold">
+                ✓ استشارة مجانية 100% وبدون التزام
               </li>
             </ul>
           </div>

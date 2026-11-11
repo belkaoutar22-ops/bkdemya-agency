@@ -25,14 +25,14 @@ export default function ProcessSection({ onOpenBookingModal }: ProcessSectionPro
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-xs sm:text-sm font-extrabold">
-            <Sparkles className="w-3.5 h-3.5 text-[#10b981]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-[#3D4B2C]/20 text-[#3D4B2C] text-xs sm:text-sm font-extrabold">
+            <Sparkles className="w-3.5 h-3.5 text-[#3D4B2C]" />
             <span>منهجية عمل BKDEMYA</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
             خطوات واضحة...{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-l from-[#10b981] to-[#059669]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-l from-[#3D4B2C] to-[#252f1b]">
               ونتائج قابلة للقياس.
             </span>
           </h2>
@@ -55,17 +55,17 @@ export default function ProcessSection({ onOpenBookingModal }: ProcessSectionPro
               >
                 {/* Step Top Bar */}
                 <div className="flex items-center justify-between mb-6">
-                  <span className="text-3xl font-black text-slate-200 group-hover:text-[#ff6b00] transition-colors font-mono">
+                  <span className="text-3xl font-black text-slate-200 group-hover:text-[#DE632E] transition-colors font-mono">
                     {step.stepNumber}
                   </span>
-                  <div className="w-12 h-12 rounded-xl bg-emerald-50 text-[#10b981] border border-emerald-100 flex items-center justify-center group-hover:bg-[#10b981] group-hover:text-white transition-all duration-300 shadow-xs">
+                  <div className="w-12 h-12 rounded-xl bg-emerald-50 text-[#3D4B2C] border border-emerald-100 flex items-center justify-center group-hover:bg-[#3D4B2C] group-hover:text-white transition-all duration-300 shadow-xs">
                     <IconComp className="w-6 h-6" />
                   </div>
                 </div>
 
                 {/* Step Content */}
                 <div className="space-y-2.5">
-                  <div className="inline-block text-[11px] font-bold text-[#ea580c] bg-orange-50 px-2 py-0.5 rounded-md">
+                  <div className="inline-block text-[11px] font-bold text-[#DE632E] bg-orange-50 px-2 py-0.5 rounded-md">
                     {step.tag}
                   </div>
                   <h3 className="text-xl font-extrabold text-slate-900 group-hover:text-emerald-950 transition-colors">
@@ -80,7 +80,7 @@ export default function ProcessSection({ onOpenBookingModal }: ProcessSectionPro
                 <div className="mt-6 pt-4 border-t border-slate-100 flex items-center gap-2">
                   <div className="h-1.5 flex-1 bg-slate-100 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-gradient-to-r from-[#ff6b00] to-[#10b981] rounded-full transition-all duration-500"
+                      className="h-full bg-gradient-to-r from-[#DE632E] to-[#3D4B2C] rounded-full transition-all duration-500"
                       style={{ width: `${(idx + 1) * 25}%` }}
                     ></div>
                   </div>
@@ -107,10 +107,10 @@ export default function ProcessSection({ onOpenBookingModal }: ProcessSectionPro
           <button
             id="process-cta-btn"
             onClick={onOpenBookingModal}
-            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-[#ff6b00] text-white font-bold text-sm shadow-md hover:shadow-lg transition-all shrink-0 cursor-pointer"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-[#DE632E] text-white font-bold text-sm shadow-md hover:shadow-lg transition-all shrink-0 cursor-pointer"
           >
-            <Calendar className="w-4 h-4 text-[#10b981]" />
-            <span>ابدأ بالخطوة الأولى الآن</span>
+            <Calendar className="w-4 h-4 text-[#DE632E]" />
+            <span>احجز استشارة مجانية عبر Google Calendar</span>
             <ArrowLeft className="w-4 h-4" />
           </button>
         </div>

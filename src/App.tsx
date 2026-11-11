@@ -24,7 +24,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#fcfdfd] text-slate-900 font-['Cairo',sans-serif] selection:bg-[#ff6b00]/20 selection:text-[#ea580c] relative">
+    <div className="min-h-screen bg-[#fcfdfd] text-slate-900 font-['Cairo',sans-serif] selection:bg-[#DE632E]/20 selection:text-[#DE632E] relative">
       {/* Top Navigation */}
       <Navbar onOpenBookingModal={handleOpenModal} />
 
@@ -49,7 +49,7 @@ export default function App() {
         <TransparencySection onOpenBookingModal={handleOpenModal} />
 
         {/* FAQ Section */}
-        <FAQSection />
+        <FAQSection onOpenBookingModal={handleOpenModal} />
 
         {/* Section 7: Final CTA */}
         <FinalCtaSection onOpenBookingModal={handleOpenModal} />

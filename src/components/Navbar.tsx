@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import { BRAND_CONFIG } from '../data/content';
-import { Calendar, MessageCircle, Menu, X, ArrowUpRight } from 'lucide-react';
+import { Calendar, Menu, X, ArrowUpRight } from 'lucide-react';
 import Logo from './Logo';
-import { trackContact } from '../utils/pixel';
 
 interface NavbarProps {
   onOpenBookingModal: () => void;
@@ -19,10 +18,6 @@ export default function Navbar({ onOpenBookingModal }: NavbarProps) {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const handleWhatsAppClick = () => {
-    trackContact('whatsapp_navbar');
-  };
 
   const navLinks = [
     { label: 'لماذا BKDEMYA؟', href: '#why-us' },
@@ -68,28 +63,14 @@ export default function Navbar({ onOpenBookingModal }: NavbarProps) {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden sm:flex items-center gap-3">
-            {/* WhatsApp Fast Link */}
-            <a
-              id="nav-whatsapp-btn"
-              href={BRAND_CONFIG.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={handleWhatsAppClick}
-              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-slate-700 bg-slate-100/90 hover:bg-emerald-50 hover:text-emerald-700 border border-slate-200/80 hover:border-emerald-300 text-sm font-semibold transition-all hover:shadow-sm"
-              title="تواصل مباشر عبر واتساب"
-            >
-              <MessageCircle className="w-4 h-4 text-[#10b981] fill-[#10b981]/20" />
-              <span>واتساب</span>
-            </a>
-
-            {/* Free Consultation Qualification Modal Trigger */}
+            {/* Free Consultation Direct Schedule Action */}
             <button
               id="nav-calendar-btn"
               onClick={onOpenBookingModal}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-[#ff6b00] to-[#ea580c] text-white text-sm font-bold shadow-md shadow-orange-500/25 hover:shadow-lg hover:shadow-orange-500/35 hover:-translate-y-0.5 transition-all cursor-pointer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#DE632E] to-[#c85220] hover:from-[#c85220] hover:to-[#b34417] text-white text-sm font-bold shadow-md shadow-[#DE632E]/25 hover:shadow-lg hover:shadow-[#DE632E]/35 hover:-translate-y-0.5 transition-all cursor-pointer"
             >
               <Calendar className="w-4 h-4" />
-              <span>احجز استشارة</span>
+              <span>احجز استشارة مجانية</span>
               <ArrowUpRight className="w-3.5 h-3.5 opacity-80" />
             </button>
           </div>
@@ -98,9 +79,9 @@ export default function Navbar({ onOpenBookingModal }: NavbarProps) {
           <div className="flex sm:hidden items-center gap-2">
             <button
               onClick={onOpenBookingModal}
-              className="px-3 py-1.5 rounded-lg bg-[#ff6b00] text-white text-xs font-bold shadow-sm cursor-pointer"
+              className="px-3.5 py-2 rounded-lg bg-[#DE632E] hover:bg-[#c85220] text-white text-xs font-bold shadow-sm cursor-pointer"
             >
-              احجز الآن
+              احجز استشارة
             </button>
             <button
               id="mobile-menu-toggle-btn"
@@ -122,7 +103,7 @@ export default function Navbar({ onOpenBookingModal }: NavbarProps) {
                   key={idx}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block px-3 py-2.5 text-slate-800 font-semibold text-sm hover:text-[#ff6b00] hover:bg-orange-50/60 rounded-xl transition-all"
+                  className="block px-3 py-2.5 text-slate-800 font-semibold text-sm hover:text-[#DE632E] hover:bg-orange-50/60 rounded-xl transition-all"
                 >
                   {link.label}
                 </a>
@@ -135,21 +116,11 @@ export default function Navbar({ onOpenBookingModal }: NavbarProps) {
                   setMobileMenuOpen(false);
                   onOpenBookingModal();
                 }}
-                className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#ff6b00] text-white font-bold text-sm shadow-md cursor-pointer"
+                className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#DE632E] hover:bg-[#c85220] text-white font-bold text-sm shadow-md cursor-pointer"
               >
                 <Calendar className="w-4 h-4" />
                 <span>احجز استشارة مجانية (30 دقيقة)</span>
               </button>
-              <a
-                href={BRAND_CONFIG.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={handleWhatsAppClick}
-                className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200 font-bold text-sm"
-              >
-                <MessageCircle className="w-4 h-4 text-[#10b981] fill-[#10b981]/20" />
-                <span>محادثة فورية عبر واتساب</span>
-              </a>
             </div>
           </div>
         )}

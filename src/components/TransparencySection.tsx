@@ -18,14 +18,14 @@ export default function TransparencySection({ onOpenBookingModal }: Transparency
           
           {/* Header */}
           <div className="space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100/70 border border-emerald-300 text-emerald-900 text-xs sm:text-sm font-extrabold">
-              <HeartHandshake className="w-4 h-4 text-[#10b981]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100/70 border border-[#3D4B2C]/30 text-[#3D4B2C] text-xs sm:text-sm font-extrabold">
+              <HeartHandshake className="w-4 h-4 text-[#3D4B2C]" />
               <span>مبدأ الشفافية المطلقة</span>
             </div>
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
               لماذا نبدأ{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff6b00] to-[#ea580c]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DE632E] to-[#c85220]">
                 باستشارة مجانية؟
               </span>
             </h2>
@@ -39,7 +39,7 @@ export default function TransparencySection({ onOpenBookingModal }: Transparency
             <p>
               لهذا لا نقدم حلولاً جاهزة للجميع، بل نبدأ بفهم طبيعة نشاطك، ثم نقترح ما يناسبه.
             </p>
-            <div className="p-4 sm:p-5 rounded-2xl bg-white border-r-4 border-r-[#10b981] border border-slate-200 shadow-xs">
+            <div className="p-4 sm:p-5 rounded-2xl bg-white border-r-4 border-r-[#3D4B2C] border border-slate-200 shadow-xs">
               <p className="text-slate-900 font-bold">
                 وإذا رأينا أن الإعلانات ليست الخيار المناسب في هذه المرحلة، سنخبرك بذلك بكل شفافية.
               </p>
@@ -49,7 +49,7 @@ export default function TransparencySection({ onOpenBookingModal }: Transparency
           {/* 3 Core Trust Pillars */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
             <div className="p-4 rounded-2xl bg-white border border-slate-200 flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg bg-emerald-50 text-[#10b981] flex items-center justify-center shrink-0">
+              <div className="w-8 h-8 rounded-lg bg-emerald-50 text-[#3D4B2C] flex items-center justify-center shrink-0">
                 <Eye className="w-4 h-4" />
               </div>
               <div>
@@ -59,7 +59,7 @@ export default function TransparencySection({ onOpenBookingModal }: Transparency
             </div>
 
             <div className="p-4 rounded-2xl bg-white border border-slate-200 flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg bg-orange-50 text-[#ea580c] flex items-center justify-center shrink-0">
+              <div className="w-8 h-8 rounded-lg bg-orange-50 text-[#DE632E] flex items-center justify-center shrink-0">
                 <CheckCheck className="w-4 h-4" />
               </div>
               <div>
@@ -87,9 +87,9 @@ export default function TransparencySection({ onOpenBookingModal }: Transparency
             <button
               id="transparency-cta-btn"
               onClick={onOpenBookingModal}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 hover:bg-[#ff6b00] text-white text-sm font-bold shadow-md hover:shadow-lg transition-all cursor-pointer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 hover:bg-[#DE632E] text-white text-sm font-bold shadow-md hover:shadow-lg transition-all cursor-pointer"
             >
-              <span>احجز الجلسة الشفافة الآن</span>
+              <span>احجز استشارة مجانية عبر Google Calendar</span>
               <ArrowLeft className="w-4 h-4" />
             </button>
           </div>

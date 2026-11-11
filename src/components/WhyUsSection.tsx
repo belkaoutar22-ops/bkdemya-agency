@@ -31,13 +31,13 @@ export default function WhyUsSection({ onOpenBookingModal }: WhyUsSectionProps) 
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200/80 text-[#ea580c] text-xs sm:text-sm font-extrabold">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200/80 text-[#DE632E] text-xs sm:text-sm font-extrabold">
             <span>لماذا BKDEMYA؟</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
             نجاح حملتك يبدأ{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff6b00] to-[#ea580c]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DE632E] to-[#c85220]">
               قبل إطلاق الإعلان.
             </span>
           </h2>
@@ -47,7 +47,7 @@ export default function WhyUsSection({ onOpenBookingModal }: WhyUsSectionProps) 
           </p>
 
           <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-800 text-sm sm:text-base leading-relaxed font-medium max-w-2xl mx-auto text-right">
-            <span className="text-[#10b981] font-bold ml-1">● في BKDEMYA:</span>
+            <span className="text-[#3D4B2C] font-bold ml-1">● في BKDEMYA:</span>
             نبدأ أولاً بفهم نشاطك التجاري، وتحليل جمهورك، ثم نبني استراتيجية تساعدك على الوصول إلى العملاء الأكثر اهتماماً بخدماتك.
           </div>
         </div>
@@ -64,11 +64,11 @@ export default function WhyUsSection({ onOpenBookingModal }: WhyUsSectionProps) 
               >
                 {/* Top Badge */}
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-50 to-orange-100 text-[#ea580c] flex items-center justify-center group-hover:bg-[#ff6b00] group-hover:text-white transition-colors duration-200 shadow-xs">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-50 to-orange-100 text-[#DE632E] flex items-center justify-center group-hover:bg-[#DE632E] group-hover:text-white transition-colors duration-200 shadow-xs">
                     <IconComponent className="w-6 h-6" />
                   </div>
                   {card.badge && (
-                    <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+                    <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-50 text-[#3D4B2C] border border-[#3D4B2C]/20">
                       {card.badge}
                     </span>
                   )}
@@ -76,7 +76,7 @@ export default function WhyUsSection({ onOpenBookingModal }: WhyUsSectionProps) 
 
                 {/* Card Content */}
                 <div className="space-y-2">
-                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-[#ea580c] transition-colors">
+                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-[#DE632E] transition-colors">
                     {card.title}
                   </h3>
                   <p className="text-sm text-slate-600 leading-relaxed font-medium">
@@ -85,7 +85,7 @@ export default function WhyUsSection({ onOpenBookingModal }: WhyUsSectionProps) 
                 </div>
 
                 {/* Bottom Active Line */}
-                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#10b981]">
+                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#3D4B2C]">
                   <span>نتائج قابلة للقياس</span>
                   <Check className="w-4 h-4" />
                 </div>
@@ -98,7 +98,7 @@ export default function WhyUsSection({ onOpenBookingModal }: WhyUsSectionProps) 
         <div className="mt-12 text-center">
           <button
             onClick={onOpenBookingModal}
-            className="inline-flex items-center gap-2 text-sm sm:text-base font-bold text-[#ea580c] hover:text-[#d9480f] underline-offset-8 hover:underline transition-all cursor-pointer"
+            className="inline-flex items-center gap-2 text-sm sm:text-base font-bold text-[#DE632E] hover:text-[#c85220] underline-offset-8 hover:underline transition-all cursor-pointer"
           >
             <span>اكتشف كيف نطبق هذه الاستراتيجية على نشاطك في 30 دقيقة مجاناً</span>
             <ArrowLeft className="w-4 h-4" />
